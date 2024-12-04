@@ -3,15 +3,17 @@ const firebaseConfig = {
     apiKey: "AIzaSyBtP8k4Mjv9JPZhuCufj4eVVtbHEv1eVlw",
     authDomain: "play-juntoss.firebaseapp.com",
     projectId: "play-juntoss",
-    storageBucket: "play-juntoss.firebasestorage.app",
+    storageBucket: "play-juntoss.appspot.com",  // Corrigido o domínio do storage
     messagingSenderId: "256572254742",
     appId: "1:256572254742:web:bf039cc8aa9ef71bff6337"
 };
+
+// Inicializando o Firebase
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
 // Link do Google Drive (substitua pelo seu link de vídeo compartilhado)
-const videoLink = "https://drive.google.com/file/d/1NyYUNJTCi6HNmsfKiOHfZG-N8z66mFHs/view?usp=sharing";
+const videoLink = "https://drive.google.com/file/d/1NyYUNJTCi6HNmsfKiOHfZG-N8z66mFHs/preview"; // Link corrigido
 document.getElementById("gdriveIframe").src = videoLink;
 
 // Função para enviar a mensagem
@@ -37,3 +39,4 @@ db.collection("messages").orderBy("timestamp").onSnapshot(function (snapshot) {
         chatMessages.appendChild(div);
     });
 });
+
