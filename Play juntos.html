@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistir Vídeos do Google Drive</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Assista ao Vídeo com Seus Amigos!</h1>
+    </header>
+
+    <!-- Video Container -->
+    <section id="videoContainer">
+        <h2>Vídeo:</h2>
+        <iframe id="gdriveIframe" width="800" height="450" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <!-- Chat Section -->
+    <section id="chatContainer">
+        <h2>Chat ao Vivo</h2>
+        <div id="chatMessages"></div>
+        <input type="text" id="chatInput" placeholder="Digite sua mensagem...">
+        <button id="sendMessageButton">Enviar</button>
+    </section>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
