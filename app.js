@@ -11,7 +11,7 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
 // Link do Google Drive (substitua pelo seu link de vídeo compartilhado)
-const videoLink = "https://drive.google.com/file/d/FILE_ID/preview";
+const videoLink = "https://drive.google.com/file/d/1NyYUNJTCi6HNmsfKiOHfZG-N8z66mFHs/view?usp=sharing";
 document.getElementById("gdriveIframe").src = videoLink;
 
 // Função para enviar a mensagem
